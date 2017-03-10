@@ -1,9 +1,5 @@
 # SquareConnect::CreateOrderRequest
 
-### Description
-
-Defines the parameters that can be included in the body of a request to the [CreateOrder](#endpoint-createorder) endpoint.
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

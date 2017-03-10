@@ -1,9 +1,5 @@
 # SquareConnect::CreateRefundRequest
 
-### Description
-
-Defines the body parameters that can be included in a request to the [CreateRefund](#endpoint-createrefund) endpoint.
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

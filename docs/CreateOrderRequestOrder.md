@@ -1,9 +1,5 @@
 # SquareConnect::CreateOrderRequestOrder
 
-### Description
-
-The object describes the order.
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
