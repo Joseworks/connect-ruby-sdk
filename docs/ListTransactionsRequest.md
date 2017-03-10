@@ -1,9 +1,5 @@
 # SquareConnect::ListTransactionsRequest
 
-### Description
-
-Defines the query parameters that can be included in a request to the [ListTransactions](#endpoint-listtransactions) endpoint.
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

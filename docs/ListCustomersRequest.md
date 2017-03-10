@@ -1,9 +1,5 @@
 # SquareConnect::ListCustomersRequest
 
-### Description
-
-Defines the query parameters that can be provided in a request to the [ListCustomers](#endpoint-listcustomers) endpoint.
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

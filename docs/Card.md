@@ -1,9 +1,5 @@
 # SquareConnect::Card
 
-### Description
-
-Represents the non-confidential details of a credit card.
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

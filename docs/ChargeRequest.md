@@ -1,9 +1,5 @@
 # SquareConnect::ChargeRequest
 
-### Description
-
-Defines the parameters that can be included in the body of a request to the [Charge](#endpoint-charge) endpoint.
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

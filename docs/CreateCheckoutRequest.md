@@ -1,9 +1,5 @@
 # SquareConnect::CreateCheckoutRequest
 
-### Description
-
-Defines the parameters that can be included in the body of a request to the [CreateCheckout](#endpoint-createcheckout) endpoint.
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

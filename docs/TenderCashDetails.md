@@ -1,9 +1,5 @@
 # SquareConnect::TenderCashDetails
 
-### Description
-
-Represents the details of a tender with `type` `CASH`.
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

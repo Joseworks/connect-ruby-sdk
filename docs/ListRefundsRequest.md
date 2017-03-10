@@ -1,9 +1,5 @@
 # SquareConnect::ListRefundsRequest
 
-### Description
-
-Defines the query parameters that can be included in a request to the [ListRefunds](#endpoint-listrefunds) endpoint.
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

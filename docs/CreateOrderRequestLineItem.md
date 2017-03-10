@@ -1,9 +1,5 @@
 # SquareConnect::CreateOrderRequestLineItem
 
-### Description
-
-Represents a line item to include in an order. Each line item describes a different product to purchase, with its own quantity and price details.
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
