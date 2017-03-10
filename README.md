@@ -1,4 +1,4 @@
-Connect v2 Ruby SDKs [![Build Status](https://travis-ci.org/square/connect-ruby-sdk.svg?branch=master)](https://travis-ci.org/square/connect-ruby-sdk)
+Connect v2 Ruby SDKs [![Build Status](https://travis-ci.org/square/connect-ruby-sdk.svg?branch=master)](https://travis-ci.org/square/connect-ruby-sdk)[![Gem Version](https://badge.fury.io/rb/square_connect.svg)](https://badge.fury.io/rb/square_connect)
 ===============
 
 This repository contains the released Ruby client SDK. Check out our [API
@@ -28,9 +28,9 @@ gem 'square_connect'
 
 ### Install from Git
 
-If the Ruby gem is hosted at a git repository: https://github.com/GIT_USER_ID/GIT_REPO_ID, then add the following in the Gemfile:
+If the Ruby gem is hosted at a git repository: https://github.com/square/connect-ruby-sdk, then add the following in the Gemfile:
 
-    gem 'square_connect', :git => 'https://github.com/GIT_USER_ID/GIT_REPO_ID.git'
+    gem 'square_connect', :git => 'https://github.com/square/connect-ruby-sdk.git'
 
 ### Include the Ruby code directly
 
