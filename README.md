@@ -49,21 +49,19 @@ Please follow the [installation](#installation) procedure and then run the follo
 # Load the gem
 require 'square_connect'
 
-api_instance = SquareConnect::CheckoutApi.new
+api_instance = SquareConnect::CatalogApi.new
 
 authorization = "authorization_example" # String | The value to provide in the Authorization header of your request. This value should follow the format `Bearer YOUR_ACCESS_TOKEN_HERE`.
 
-location_id = "location_id_example" # String | The ID of the business location to associate the checkout with.
-
-body = SquareConnect::CreateCheckoutRequest.new # CreateCheckoutRequest | An object containing the fields to POST for the request.  See the corresponding object definition for field details.
+body = SquareConnect::BatchDeleteCatalogObjectsRequest.new # BatchDeleteCatalogObjectsRequest | An object containing the fields to POST for the request.  See the corresponding object definition for field details.
 
 
 begin
-  #CreateCheckout
-  result = api_instance.create_checkout(authorization, location_id, body)
+  #BatchDeleteCatalogObjects
+  result = api_instance.batch_delete_catalog_objects(authorization, body)
   p result
 rescue SquareConnect::ApiError => e
-  puts "Exception when calling CheckoutApi->create_checkout: #{e}"
+  puts "Exception when calling CatalogApi->batch_delete_catalog_objects: #{e}"
 end
 
 ```
@@ -74,6 +72,17 @@ All URIs are relative to *https://connect.squareup.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*SquareConnect::CatalogApi* | [**batch_delete_catalog_objects**](docs/CatalogApi.md#batch_delete_catalog_objects) | **POST** /v2/catalog/batch-delete | BatchDeleteCatalogObjects
+*SquareConnect::CatalogApi* | [**batch_retrieve_catalog_objects**](docs/CatalogApi.md#batch_retrieve_catalog_objects) | **POST** /v2/catalog/batch-retrieve | BatchRetrieveCatalogObjects
+*SquareConnect::CatalogApi* | [**batch_upsert_catalog_objects**](docs/CatalogApi.md#batch_upsert_catalog_objects) | **POST** /v2/catalog/batch-upsert | BatchUpsertCatalogObjects
+*SquareConnect::CatalogApi* | [**catalog_info**](docs/CatalogApi.md#catalog_info) | **GET** /v2/catalog/info | CatalogInfo
+*SquareConnect::CatalogApi* | [**delete_catalog_object**](docs/CatalogApi.md#delete_catalog_object) | **DELETE** /v2/catalog/object/{object_id} | DeleteCatalogObject
+*SquareConnect::CatalogApi* | [**list_catalog**](docs/CatalogApi.md#list_catalog) | **GET** /v2/catalog/list | ListCatalog
+*SquareConnect::CatalogApi* | [**retrieve_catalog_object**](docs/CatalogApi.md#retrieve_catalog_object) | **GET** /v2/catalog/object/{object_id} | RetrieveCatalogObject
+*SquareConnect::CatalogApi* | [**search_catalog_objects**](docs/CatalogApi.md#search_catalog_objects) | **POST** /v2/catalog/search | SearchCatalogObjects
+*SquareConnect::CatalogApi* | [**update_item_modifier_lists**](docs/CatalogApi.md#update_item_modifier_lists) | **POST** /v2/catalog/update-item-modifier-lists | UpdateItemModifierLists
+*SquareConnect::CatalogApi* | [**update_item_taxes**](docs/CatalogApi.md#update_item_taxes) | **POST** /v2/catalog/update-item-taxes | UpdateItemTaxes
+*SquareConnect::CatalogApi* | [**upsert_catalog_object**](docs/CatalogApi.md#upsert_catalog_object) | **POST** /v2/catalog/object | UpsertCatalogObject
 *SquareConnect::CheckoutApi* | [**create_checkout**](docs/CheckoutApi.md#create_checkout) | **POST** /v2/locations/{location_id}/checkouts | CreateCheckout
 *SquareConnect::CustomerApi* | [**create_customer**](docs/CustomerApi.md#create_customer) | **POST** /v2/customers | CreateCustomer
 *SquareConnect::CustomerApi* | [**delete_customer**](docs/CustomerApi.md#delete_customer) | **DELETE** /v2/customers/{customer_id} | DeleteCustomer
@@ -95,10 +104,45 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [SquareConnect::Address](docs/Address.md)
+ - [SquareConnect::BatchDeleteCatalogObjectsRequest](docs/BatchDeleteCatalogObjectsRequest.md)
+ - [SquareConnect::BatchDeleteCatalogObjectsResponse](docs/BatchDeleteCatalogObjectsResponse.md)
+ - [SquareConnect::BatchRetrieveCatalogObjectsRequest](docs/BatchRetrieveCatalogObjectsRequest.md)
+ - [SquareConnect::BatchRetrieveCatalogObjectsResponse](docs/BatchRetrieveCatalogObjectsResponse.md)
+ - [SquareConnect::BatchUpsertCatalogObjectsRequest](docs/BatchUpsertCatalogObjectsRequest.md)
+ - [SquareConnect::BatchUpsertCatalogObjectsResponse](docs/BatchUpsertCatalogObjectsResponse.md)
  - [SquareConnect::CaptureTransactionRequest](docs/CaptureTransactionRequest.md)
  - [SquareConnect::CaptureTransactionResponse](docs/CaptureTransactionResponse.md)
  - [SquareConnect::Card](docs/Card.md)
  - [SquareConnect::CardBrand](docs/CardBrand.md)
+ - [SquareConnect::CatalogCategory](docs/CatalogCategory.md)
+ - [SquareConnect::CatalogDiscount](docs/CatalogDiscount.md)
+ - [SquareConnect::CatalogDiscountType](docs/CatalogDiscountType.md)
+ - [SquareConnect::CatalogIdMapping](docs/CatalogIdMapping.md)
+ - [SquareConnect::CatalogInfoRequest](docs/CatalogInfoRequest.md)
+ - [SquareConnect::CatalogInfoResponse](docs/CatalogInfoResponse.md)
+ - [SquareConnect::CatalogInfoResponseLimits](docs/CatalogInfoResponseLimits.md)
+ - [SquareConnect::CatalogItem](docs/CatalogItem.md)
+ - [SquareConnect::CatalogItemModifierListInfo](docs/CatalogItemModifierListInfo.md)
+ - [SquareConnect::CatalogItemProductType](docs/CatalogItemProductType.md)
+ - [SquareConnect::CatalogItemVariation](docs/CatalogItemVariation.md)
+ - [SquareConnect::CatalogModifier](docs/CatalogModifier.md)
+ - [SquareConnect::CatalogModifierList](docs/CatalogModifierList.md)
+ - [SquareConnect::CatalogModifierListSelectionType](docs/CatalogModifierListSelectionType.md)
+ - [SquareConnect::CatalogModifierOverride](docs/CatalogModifierOverride.md)
+ - [SquareConnect::CatalogObject](docs/CatalogObject.md)
+ - [SquareConnect::CatalogObjectBatch](docs/CatalogObjectBatch.md)
+ - [SquareConnect::CatalogObjectType](docs/CatalogObjectType.md)
+ - [SquareConnect::CatalogPricingType](docs/CatalogPricingType.md)
+ - [SquareConnect::CatalogQuery](docs/CatalogQuery.md)
+ - [SquareConnect::CatalogQueryExact](docs/CatalogQueryExact.md)
+ - [SquareConnect::CatalogQueryItemsForModifierList](docs/CatalogQueryItemsForModifierList.md)
+ - [SquareConnect::CatalogQueryItemsForTax](docs/CatalogQueryItemsForTax.md)
+ - [SquareConnect::CatalogQueryPrefix](docs/CatalogQueryPrefix.md)
+ - [SquareConnect::CatalogQueryRange](docs/CatalogQueryRange.md)
+ - [SquareConnect::CatalogQuerySortedAttribute](docs/CatalogQuerySortedAttribute.md)
+ - [SquareConnect::CatalogQueryText](docs/CatalogQueryText.md)
+ - [SquareConnect::CatalogTax](docs/CatalogTax.md)
+ - [SquareConnect::CatalogV1Id](docs/CatalogV1Id.md)
  - [SquareConnect::ChargeRequest](docs/ChargeRequest.md)
  - [SquareConnect::ChargeResponse](docs/ChargeResponse.md)
  - [SquareConnect::Checkout](docs/Checkout.md)
@@ -118,6 +162,8 @@ Class | Method | HTTP request | Description
  - [SquareConnect::Customer](docs/Customer.md)
  - [SquareConnect::CustomerGroupInfo](docs/CustomerGroupInfo.md)
  - [SquareConnect::CustomerPreferences](docs/CustomerPreferences.md)
+ - [SquareConnect::DeleteCatalogObjectRequest](docs/DeleteCatalogObjectRequest.md)
+ - [SquareConnect::DeleteCatalogObjectResponse](docs/DeleteCatalogObjectResponse.md)
  - [SquareConnect::DeleteCustomerCardRequest](docs/DeleteCustomerCardRequest.md)
  - [SquareConnect::DeleteCustomerCardResponse](docs/DeleteCustomerCardResponse.md)
  - [SquareConnect::DeleteCustomerRequest](docs/DeleteCustomerRequest.md)
@@ -125,6 +171,10 @@ Class | Method | HTTP request | Description
  - [SquareConnect::Error](docs/Error.md)
  - [SquareConnect::ErrorCategory](docs/ErrorCategory.md)
  - [SquareConnect::ErrorCode](docs/ErrorCode.md)
+ - [SquareConnect::InventoryAlertType](docs/InventoryAlertType.md)
+ - [SquareConnect::ItemVariationLocationOverrides](docs/ItemVariationLocationOverrides.md)
+ - [SquareConnect::ListCatalogRequest](docs/ListCatalogRequest.md)
+ - [SquareConnect::ListCatalogResponse](docs/ListCatalogResponse.md)
  - [SquareConnect::ListCustomersRequest](docs/ListCustomersRequest.md)
  - [SquareConnect::ListCustomersResponse](docs/ListCustomersResponse.md)
  - [SquareConnect::ListLocationsRequest](docs/ListLocationsRequest.md)
@@ -140,11 +190,17 @@ Class | Method | HTTP request | Description
  - [SquareConnect::OrderLineItem](docs/OrderLineItem.md)
  - [SquareConnect::Refund](docs/Refund.md)
  - [SquareConnect::RefundStatus](docs/RefundStatus.md)
+ - [SquareConnect::RetrieveCatalogObjectRequest](docs/RetrieveCatalogObjectRequest.md)
+ - [SquareConnect::RetrieveCatalogObjectResponse](docs/RetrieveCatalogObjectResponse.md)
  - [SquareConnect::RetrieveCustomerRequest](docs/RetrieveCustomerRequest.md)
  - [SquareConnect::RetrieveCustomerResponse](docs/RetrieveCustomerResponse.md)
  - [SquareConnect::RetrieveTransactionRequest](docs/RetrieveTransactionRequest.md)
  - [SquareConnect::RetrieveTransactionResponse](docs/RetrieveTransactionResponse.md)
+ - [SquareConnect::SearchCatalogObjectsRequest](docs/SearchCatalogObjectsRequest.md)
+ - [SquareConnect::SearchCatalogObjectsResponse](docs/SearchCatalogObjectsResponse.md)
  - [SquareConnect::SortOrder](docs/SortOrder.md)
+ - [SquareConnect::TaxCalculationPhase](docs/TaxCalculationPhase.md)
+ - [SquareConnect::TaxInclusionType](docs/TaxInclusionType.md)
  - [SquareConnect::Tender](docs/Tender.md)
  - [SquareConnect::TenderCardDetails](docs/TenderCardDetails.md)
  - [SquareConnect::TenderCardDetailsEntryMethod](docs/TenderCardDetailsEntryMethod.md)
@@ -155,6 +211,12 @@ Class | Method | HTTP request | Description
  - [SquareConnect::TransactionProduct](docs/TransactionProduct.md)
  - [SquareConnect::UpdateCustomerRequest](docs/UpdateCustomerRequest.md)
  - [SquareConnect::UpdateCustomerResponse](docs/UpdateCustomerResponse.md)
+ - [SquareConnect::UpdateItemModifierListsRequest](docs/UpdateItemModifierListsRequest.md)
+ - [SquareConnect::UpdateItemModifierListsResponse](docs/UpdateItemModifierListsResponse.md)
+ - [SquareConnect::UpdateItemTaxesRequest](docs/UpdateItemTaxesRequest.md)
+ - [SquareConnect::UpdateItemTaxesResponse](docs/UpdateItemTaxesResponse.md)
+ - [SquareConnect::UpsertCatalogObjectRequest](docs/UpsertCatalogObjectRequest.md)
+ - [SquareConnect::UpsertCatalogObjectResponse](docs/UpsertCatalogObjectResponse.md)
  - [SquareConnect::VoidTransactionRequest](docs/VoidTransactionRequest.md)
  - [SquareConnect::VoidTransactionResponse](docs/VoidTransactionResponse.md)
 
