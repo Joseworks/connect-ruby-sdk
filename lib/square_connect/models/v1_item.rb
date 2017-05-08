@@ -106,7 +106,7 @@ module SquareConnect
         :'color' => :'String',
         :'abbreviation' => :'String',
         :'visibility' => :'String',
-        :'available_online' => :'BOOLEAN',
+        :'available_online' => :'String',
         :'master_image' => :'V1ItemImage',
         :'category' => :'V1Category',
         :'variations' => :'Array<V1Variation>',
